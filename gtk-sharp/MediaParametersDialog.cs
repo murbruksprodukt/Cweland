@@ -16,9 +16,9 @@ namespace Weland {
 	    type.Active = (int) media.Type;
 	    tide.Active = media.LightIndex;
 	    angle.Value = media.Direction;
-	    currentMagnitude.Text = String.Format("{0:0.000}", World.ToDouble(media.CurrentMagnitude));
-	    low.Text = String.Format("{0:0.000}", World.ToDouble(media.Low));
-	    high.Text = String.Format("{0:0.000}", World.ToDouble(media.High));
+	    currentMagnitude.Text = String.Format("{0:0.0000}", World.ToDouble(media.CurrentMagnitude));
+	    low.Text = String.Format("{0:0.0000}", World.ToDouble(media.Low));
+	    high.Text = String.Format("{0:0.0000}", World.ToDouble(media.High));
 	    obstructed.Active = media.SoundObstructedByFloor;
 	}
 

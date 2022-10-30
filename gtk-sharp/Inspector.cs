@@ -103,7 +103,7 @@ namespace Weland {
 		    monsterType.Active = mapObject.Index - 1;
 		    monsterActivatedBy.Active = (int) mapObject.ActivationBias;
 		    monsterAngle.Value = mapObject.Facing;
-		    monsterHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+		    monsterHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		    monsterFromCeiling.Active = mapObject.FromCeiling;
 		    monsterTeleportsIn.Active = mapObject.Invisible;
 		    monsterTeleportsOut.Active = mapObject.Floats;
@@ -112,26 +112,26 @@ namespace Weland {
 		} else if (mapObject.Type == ObjectType.Player) {
 		    playerTeam.Active = mapObject.Index;
 		    playerAngle.Value = mapObject.Facing;
-		    playerHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+		    playerHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		    playerFromCeiling.Active = mapObject.FromCeiling;
 		} else if (mapObject.Type == ObjectType.Scenery) {
 		    sceneryType.Active = mapObject.Index;
 		    sceneryAngle.Value = mapObject.Facing;
-		    sceneryHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+		    sceneryHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		    sceneryFromCeiling.Active = mapObject.FromCeiling;
 		} else if (mapObject.Type == ObjectType.Item) {
 		    itemType.Active = mapObject.Index - 1;
-		    itemHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+		    itemHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		    itemFromCeiling.Active = mapObject.FromCeiling;
 		    itemTeleportsIn.Active = mapObject.Invisible;
 		    itemNetworkOnly.Active = mapObject.NetworkOnly;
 		} else if (mapObject.Type == ObjectType.Goal) {
                     goalCheckpoint.Text = String.Format("{0}", mapObject.Index);
                     goalFacing.Value = mapObject.Facing;
-                    goalHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+                    goalHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		} else if (mapObject.Type == ObjectType.Sound) {
 		    soundType.Active = mapObject.Index;
-		    soundHeight.Text = String.Format("{0:0.000}", World.ToDouble(mapObject.Z));
+		    soundHeight.Text = String.Format("{0:0.0000}", World.ToDouble(mapObject.Z));
 		    soundFromCeiling.Active = mapObject.FromCeiling;
 		    soundIsOnPlatform.Active = mapObject.OnPlatform;
 		    soundFloats.Active = mapObject.Floats;

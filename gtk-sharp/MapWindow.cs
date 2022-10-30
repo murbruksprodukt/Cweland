@@ -260,16 +260,16 @@ namespace Weland {
 	    statusbar.Pop(id);
 
 	    if (selection.Point != -1) {
-		statusbar.Push(id, String.Format("Point Index: {0}\tLocation: ({1:0.000}, {2:0.000})", selection.Point, World.ToDouble(Level.Endpoints[selection.Point].X), World.ToDouble(Level.Endpoints[selection.Point].Y)));
+		statusbar.Push(id, String.Format("Point Index: {0}\tLocation: ({1:0.0000}, {2:0.0000})", selection.Point, World.ToDouble(Level.Endpoints[selection.Point].X), World.ToDouble(Level.Endpoints[selection.Point].Y)));
 	    } else if (selection.Line != -1) {
 		Line line = Level.Lines[selection.Line];
-		statusbar.Push(id, String.Format("Line Index: {0}\tLine Length: {1:0.000} WU", selection.Line, World.ToDouble(Level.Distance(Level.Endpoints[line.EndpointIndexes[0]], Level.Endpoints[line.EndpointIndexes[1]])))); 
+		statusbar.Push(id, String.Format("Line Index: {0}\tLine Length: {1:0.0000} WU", selection.Line, World.ToDouble(Level.Distance(Level.Endpoints[line.EndpointIndexes[0]], Level.Endpoints[line.EndpointIndexes[1]])))); 
 	    } else if (selection.Polygon != -1) {
 		Polygon polygon = Level.Polygons[selection.Polygon];
-		statusbar.Push(id, String.Format("Polygon index {0}\tFloor Height: {1:0.000}, Ceiling Height: {2:0.000}", selection.Polygon, World.ToDouble(polygon.FloorHeight), World.ToDouble(polygon.CeilingHeight)));
+		statusbar.Push(id, String.Format("Polygon index {0}\tFloor Height: {1:0.0000}, Ceiling Height: {2:0.0000}", selection.Polygon, World.ToDouble(polygon.FloorHeight), World.ToDouble(polygon.CeilingHeight)));
 	    } else if (selection.Object != -1) {
 		MapObject obj = Level.Objects[selection.Object];
-		statusbar.Push(id, String.Format("Object index: {0}\tLocation: ({1:0.000}, {2:0.000})", selection.Object, World.ToDouble(obj.X), World.ToDouble(obj.Y)));
+		statusbar.Push(id, String.Format("Object index: {0}\tLocation: ({1:0.0000}, {2:0.0000})", selection.Object, World.ToDouble(obj.X), World.ToDouble(obj.Y)));
 	    } else if (selection.Annotation != -1) {
 		Annotation note = Level.Annotations[selection.Annotation];
 		statusbar.Push(id, String.Format("Annotation index: {0}\tPolygon: {1}\tLocation: ({2:0.000}, {3:0.000})", selection.Annotation, note.PolygonIndex, World.ToDouble(note.X), World.ToDouble(note.Y)));
@@ -283,7 +283,7 @@ namespace Weland {
 		if (theta < 0) { 
 		    theta += 2 * Math.PI;
 		}
-		statusbar.Push(id, String.Format("Line Length: {0:0.000} WU\tAngle: {1:0.0}Â°", World.ToDouble((int) Math.Round(r)), theta * 180 / Math.PI));
+		statusbar.Push(id, String.Format("Line Length: {0:0.0000} WU\tAngle: {1:0.000}Â°", World.ToDouble((int) Math.Round(r)), theta * 180 / Math.PI));
 	    } else {
 		statusbar.Push(id, String.Format("Level: {0}\t{1} Polygons, {2} Lights, {3} Objects", Level.Name, Level.Polygons.Count, Level.Lights.Count, Level.Objects.Count));
 	    }
@@ -1125,7 +1125,7 @@ namespace Weland {
 	    ColorRadioButton b = null;
 	    for (int i = 0; i < paintIndexes.Keys.Count; ++i) {
 		Gdk.Color c = paintColors[i % paintColors.Count];
-		b = new ColorRadioButton(b, String.Format("{0:0.000}", World.ToDouble(paintIndexes.Keys[i])), c);
+		b = new ColorRadioButton(b, String.Format("{0:0.0000}", World.ToDouble(paintIndexes.Keys[i])), c);
 		b.Index = i;
 		b.Toggled += OnChangePaintIndex;
 		b.DoubleClicked += OnPaletteEdit;
@@ -1487,7 +1487,7 @@ namespace Weland {
 
 	    gridRotationScale.Value = grid.Rotation;
 	    gridScaleScale.Value = Math.Log(grid.Scale, 2.0);
-	    gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+	    gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 	}
 
 	void SaveGrid() {
@@ -1506,7 +1506,7 @@ namespace Weland {
 
 	    gridRotationScale.Value = grid.Rotation;
 	    gridScaleScale.Value = Math.Log(grid.Scale, 2.0);
-	    gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+	    gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 	}
 
 	internal void OnGridReset(object o, EventArgs e) {
@@ -1526,7 +1526,7 @@ namespace Weland {
 		
 	    gridRotationScale.Value = grid.Rotation;
 	    gridScaleScale.Value = Math.Log(grid.Scale, 2.0);
-	    gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+	    gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 	    Redraw();
 	}
 	
@@ -1539,7 +1539,7 @@ namespace Weland {
 	internal void OnGridScaleChange(object o, EventArgs e) {
 		grid.Scale = Math.Pow(2, ((Gtk.Range) o).Value);
 		SaveGrid();
-		gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+		gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 		Redraw();
 	}
 
@@ -1603,7 +1603,7 @@ namespace Weland {
 		dialog.Destroy();
 	    }
 	    gridScaleScale.Value = Math.Log(grid.Scale, 2.0);
-	    gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+	    gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 	    Redraw();
 	}
 
@@ -1620,7 +1620,7 @@ namespace Weland {
 		
 		gridRotationScale.Value = grid.Rotation;
 		gridScaleScale.Value = Math.Log(grid.Scale, 2.0);
-		gridScaleLabel.Text = String.Format("Scale: {0:0.000}", grid.Scale);
+		gridScaleLabel.Text = String.Format("Scale: {0:0.0000}", grid.Scale);
 		
 		Redraw();
 	    }
