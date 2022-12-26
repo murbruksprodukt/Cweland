@@ -214,9 +214,9 @@ Pfhor Platform</property>
                               <widget class="GtkEntry" id="minHeight">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="max_length">6</property>
+                                <property name="max_length">8</property>
                                 <property name="invisible_char">&#x25CF;</property>
-                                <property name="width_chars">6</property>
+                                <property name="width_chars">8</property>
                               </widget>
                               <packing>
                                 <property name="position">1</property>
@@ -265,9 +265,9 @@ Pfhor Platform</property>
                               <widget class="GtkEntry" id="maxHeight">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="max_length">6</property>
+                                <property name="max_length">8</property>
                                 <property name="invisible_char">&#x25CF;</property>
-                                <property name="width_chars">6</property>
+                                <property name="width_chars">8</property>
                               </widget>
                               <packing>
                                 <property name="position">1</property>
@@ -422,7 +422,7 @@ Pfhor Platform</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
-                                        <property name="tooltip" translatable="yes">If the player is allowed between the floor or ceiling and a platform, or if it closes on the player he will be crushed. Select "Reverses Direction" below in conjunction with this option if you only want to injure the player.</property>
+                                        <property name="tooltip" translatable="yes">If the player is allowed between the floor or ceiling and a platform, or if it closes on a player or monster, they will be crushed. Select "Reverses Direction" below in conjunction with this option if you only want to injure the player/monster.</property>
                                         <property name="draw_indicator">True</property>
                                       </widget>
                                       <packing>
@@ -435,7 +435,7 @@ Pfhor Platform</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
-                                        <property name="tooltip" translatable="yes">If the player is allowed between the floor or ceiling and a plaform, or if it closes on the player the platform or door will retract immediately.</property>
+                                        <property name="tooltip" translatable="yes">If the player is allowed between the floor or ceiling and a plaform, or if it closes on the player, the platform or door will retract immediately.</property>
                                         <property name="yalign">0.55000001192092896</property>
                                         <property name="draw_indicator">True</property>
                                       </widget>
@@ -483,7 +483,7 @@ Pfhor Platform</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="tooltip" translatable="yes">When this option is disabled Players and Monsters must stand on the platform to activate it as a lift. When this option is enabled it allows the platform to be used as a door, and may be activated with the action key when the player is near the door. </property>
+                        <property name="tooltip" translatable="yes">When this option is disabled, Players and Monsters must stand on the platform to activate it as a lift. When this option is enabled, it allows the platform to be used as a door, and may be activated with the action key when the player is near the door. </property>
                         <property name="draw_indicator">True</property>
                       </widget>
                       <packing>
@@ -562,7 +562,7 @@ Pfhor Platform</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
-                                    <property name="tooltip" translatable="yes">Autocalculate height values so that the platform will extend from floor to ceiling.</property>
+                                    <property name="tooltip" translatable="yes">Auto-calculate height values so that the platform will extend from floor to ceiling.</property>
                                     <property name="draw_indicator">True</property>
                                   </widget>
                                   <packing>
@@ -627,7 +627,7 @@ Pfhor Platform</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
-                                    <property name="tooltip" translatable="yes">Activate the platform once. It will not be possilbe to activate the platform again.</property>
+                                    <property name="tooltip" translatable="yes">Activate the platform once. It will not be possible to activate the platform again. Warning: This has a high chance of breaking your map. When using this, ensure the "Can't Deactivate Externally" flag is used alongside. With this said, this does not prevent all potential issues when using this flag.</property>
                                     <property name="draw_indicator">True</property>
                                   </widget>
                                   <packing>
@@ -679,7 +679,7 @@ Pfhor Platform</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
-                                    <property name="tooltip" translatable="yes">The platform will activate adjacent platforms at each floor and ceiling elevation it comes to.</property>
+                                    <property name="tooltip" translatable="yes">The platform will activate adjacent platforms at its minimum and maximum elevations.</property>
                                     <property name="draw_indicator">True</property>
                                   </widget>
                                   <packing>
@@ -726,37 +726,7 @@ Pfhor Platform</property>
                         <child>
                           <widget class="GtkComboBox" id="tag">
                             <property name="visible">True</property>
-                            <property name="items" translatable="yes">NONE
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30</property>
+                            <property name="items" translatable="yes">NONE</property>
                           </widget>
                           <packing>
                             <property name="position">1</property>
@@ -854,7 +824,7 @@ Pfhor Platform</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
-                                        <property name="tooltip" translatable="yes">When the platform stops the lights of the polygon it's in will deactivate.</property>
+                                        <property name="tooltip" translatable="yes">When the platform stops, the lights of the polygon it's in will deactivate.</property>
                                         <property name="draw_indicator">True</property>
                                       </widget>
                                       <packing>
@@ -942,7 +912,7 @@ Pfhor Platform</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip" translatable="yes">If the platform is activated by a switch, or by the player it will not respond to the switch or the player until activation is complete.</property>
+                                <property name="tooltip" translatable="yes">If the platform is activated by a switch or by the player, it will not respond to the switch or the player until it returns to an inactive state.</property>
                                 <property name="draw_indicator">True</property>
                               </widget>
                               <packing>
@@ -981,7 +951,7 @@ Pfhor Platform</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip" translatable="yes">If this platform was activated by an adjacent platform, it will not activate the adjacent platform it was activated by.</property>
+                                <property name="tooltip" translatable="yes">If this platform was activated by an adjacent platform, it will not activate the adjacent platform that activated it.</property>
                                 <property name="draw_indicator">True</property>
                               </widget>
                               <packing>
@@ -1020,7 +990,7 @@ Pfhor Platform</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip" translatable="yes">This platform will not display as red on the automap.</property>
+                                <property name="tooltip" translatable="yes">This platform will not display as red on the automap and will not appear on #CHECKPOINT displays in terminals.</property>
                                 <property name="draw_indicator">True</property>
                               </widget>
                               <packing>
