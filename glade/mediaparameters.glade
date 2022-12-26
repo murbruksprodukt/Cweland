@@ -194,9 +194,9 @@ Jjaro</property>
                   <widget class="GtkEntry" id="currentMagnitude">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="max_length">6</property>
+                    <property name="max_length">8</property>
                     <property name="invisible_char">&#x25CF;</property>
-                    <property name="width_chars">6</property>
+                    <property name="width_chars">8</property>
                   </widget>
                   <packing>
                     <property name="left_attach">1</property>
@@ -208,9 +208,9 @@ Jjaro</property>
                   <widget class="GtkEntry" id="low">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="max_length">6</property>
+                    <property name="max_length">8</property>
                     <property name="invisible_char">&#x25CF;</property>
-                    <property name="width_chars">6</property>
+                    <property name="width_chars">8</property>
                   </widget>
                   <packing>
                     <property name="left_attach">1</property>
@@ -224,9 +224,9 @@ Jjaro</property>
                   <widget class="GtkEntry" id="high">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="max_length">6</property>
+                    <property name="max_length">8</property>
                     <property name="invisible_char">&#x25CF;</property>
-                    <property name="width_chars">6</property>
+                    <property name="width_chars">8</property>
                   </widget>
                   <packing>
                     <property name="left_attach">1</property>

@@ -18,21 +18,21 @@ namespace Weland {
 	    delay.Text = String.Format("{0:0.000}", (double) platform.Delay / 30);
 	    if (platform.MinimumHeight == -1) {
 		autocalcMinHeight.Active = true;
-		minHeight.Text = String.Format("{0:0.000}", World.ToDouble(level.AutocalPlatformMinimum(platform_index)));
+		minHeight.Text = String.Format("{0:0.0000}", World.ToDouble(level.AutocalPlatformMinimum(platform_index)));
 		minHeight.Sensitive = false;
 	    } else {
 		autocalcMinHeight.Active = false;
-		minHeight.Text = String.Format("{0:0.000}", World.ToDouble(platform.MinimumHeight));
+		minHeight.Text = String.Format("{0:0.0000}", World.ToDouble(platform.MinimumHeight));
 		minHeight.Sensitive = true;
 	    }
 
 	    if (platform.MaximumHeight == -1) {
 		autocalcMaxHeight.Active = true;
-		maxHeight.Text = String.Format("{0:0.000}", World.ToDouble(level.AutocalPlatformMaximum(platform_index)));
+		maxHeight.Text = String.Format("{0:0.0000}", World.ToDouble(level.AutocalPlatformMaximum(platform_index)));
 		maxHeight.Sensitive = false;
 	    } else {
 		autocalcMaxHeight.Active = false;
-		maxHeight.Text = String.Format("{0:0.000}", World.ToDouble(platform.MaximumHeight));
+		maxHeight.Text = String.Format("{0:0.0000}", World.ToDouble(platform.MaximumHeight));
 		maxHeight.Sensitive = true;
 	    }
 
